@@ -1,61 +1,42 @@
 <?php
-/* Imprimir por pantalla todas las tablas de multiplicar dentro de una tabla de html
+/* Mostrar una tabla de html con las tablas de multiplicar del 1 al 10
 */
 
-echo "<table border='1'>
-    <tr>
-        <th></th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>9</th>
-        <th>10</th>
-    </tr>
-    <tr>
-        <th>1</th>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-    </tr>
-    <tr>
-        <th>2</th>
-        <td>2</td>
-        <td>4</td>
-        <td>6</td>
-        <td>8</td>
-        <td>10</td>
-        <td>12</td>
-        <td>14</td>
-        <td>16</td>
-        <td>18</td>
-        <td>20</td>
-    </tr>
-    <tr>
-    <th>3</th>
-    <td>3</td>
-    <td>6</td>
-    <td>9</td>
-    <td>12</td>
-    <td>15</td>
-    <td>18</td>
-    <td>21</td>
-    <td>24</td>
-    <td>27</td>
-    <td>30</td>
-    </tr>
+// echo "<table border='1'><tr>"; //inicio tabla
+//     echo "<tr>"; // abro fila 1 de celdas Enunciado
+//         for($cabecera = 1;$cabecera<=10;$cabecera++){
+//             echo "<th>Tabla del $cabecera</th>";
+//         }
+//     echo "</tr>"; // cierro fila 1 de celdas
+//     echo "<tr>"; // abro fila 2
+//         for($i=1;$i<=10;$i++){
+//             echo "<td>";
+//                 for($x=1;$x<=10;$x++){
+//                     echo "$i X $x = ".($i*$x)."<hr>";
+//                 }
+//             echo"</td>";
+//         }
+//     echo "</tr>";// cierro fila 2
+// echo "</table>"; // fin de la tabla
+
+echo "<table border='1'>";
+    echo "<tr>"; //Abro la fila para los datos de la cabecera
+        for($encabezado=1;$encabezado<=10;$encabezado++){
+            echo "<th> Tabla del $encabezado </th>";
+        }
+    echo "</tr>"; // cierro la fila para los datos de la cabecera
     
-</table>"
+    echo "<tr>"; // abro fila para insertar las tablas de multiplicar, estas van a estar en una misma fila, solo con salto de linea con linea hr
+        for($multiplicando=1;$multiplicando<=10;$multiplicando++){
+            echo "<td>";
+                for($miltiplicador=1;$miltiplicador<=10;$miltiplicador++){
+                    echo "Si $multiplicando X $miltiplicador = ".$multiplicando*$miltiplicador."<hr>";
+                }
+            echo "</td>";
+        }
+    echo "</tr>"; // cierro fila 2, donde van a a estar en si las tablas de multiplicar
+
+
+echo "</table>";
 
 ?>
