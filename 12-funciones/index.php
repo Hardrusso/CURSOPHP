@@ -46,4 +46,35 @@ for($x=0;$x<=10;$x++){
     tabla($x);
 }
 
+// Ejemplo3
+
+function calculadora($numero1,$numero2,$negrita = false){
+//conjunto de instrucciones
+    $suma = $numero1 + $numero2;
+    $resta = $numero1 - $numero2;
+    $multiplicacion = $numero1 * $numero2;
+    $division = $numero1 / $numero2;
+
+        if($neguita!=false){
+            echo "<h1>";
+        }
+
+    echo "la suma: $suma <br>";
+    echo "la resta: $resta <br>";
+    echo "la multiplicacion: $multiplicacion <br>";
+    echo "la division: $division <br>";
+    
+        if($neguita!=false){
+            echo "</h1>";
+        }
+
+    echo "<hr>";
+
+}
+
+calculadora(1,5);
+calculadora(3,15);
+calculadora(10,2);
+calculadora(111,17);
+
 ?>
