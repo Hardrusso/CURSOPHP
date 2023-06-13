@@ -8,8 +8,9 @@
 
 //nombreDeLaFuncion($mi_parametro);
 
-// Ejemplo
+// Ejemplo 1 y 2
 
+/*
 function muestraNombres(){
     echo "Jonathan Caro <br>";
     echo "Azucena Carrillo <br>";
@@ -45,9 +46,10 @@ function tabla($numero){
 for($x=0;$x<=10;$x++){
     tabla($x);
 }
+*/
 
 // Ejemplo3
-
+/*
 function calculadora($numero1,$numero2,$negrita = false){
 //conjunto de instrucciones
     $suma = $numero1 + $numero2;
@@ -55,26 +57,39 @@ function calculadora($numero1,$numero2,$negrita = false){
     $multiplicacion = $numero1 * $numero2;
     $division = $numero1 / $numero2;
 
-        if($neguita!=false){
-            echo "<h1>";
+    $cadena_texto ="";
+
+        if($negrita!=false){
+            $cadena_texto .= "<h2>";
         }
 
-    echo "la suma: $suma <br>";
-    echo "la resta: $resta <br>";
-    echo "la multiplicacion: $multiplicacion <br>";
-    echo "la division: $division <br>";
+        $cadena_texto .= "la suma: $suma <br>";
+        $cadena_texto .= "la resta: $resta <br>";
+        $cadena_texto .= "la multiplicacion: $multiplicacion <br>";
+        $cadena_texto .= "la division: $division <br>";
     
-        if($neguita!=false){
-            echo "</h1>";
+        if($negrita!=false){
+            $cadena_texto .= "</h2>";
         }
 
-    echo "<hr>";
+    $cadena_texto .= "<hr>";
+
+    return $cadena_texto;
 
 }
 
-calculadora(1,5);
-calculadora(3,15);
-calculadora(10,2);
-calculadora(111,17);
+echo calculadora(1,5,true);
+*/
+
+// ejemplo 4
+function devuelveElNombre ($nombre, $apellidos){
+    $texto = "El nombre es: $nombre"
+             ."<br/>".
+             "los apellidos son: $apellidos";
+    
+    return $texto;
+}
+
+echo devuelveElNombre("jonathan","caro");
 
 ?>
