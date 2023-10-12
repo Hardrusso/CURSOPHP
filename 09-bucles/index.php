@@ -19,9 +19,9 @@ echo "<hr>";
 
 // Ejemplo
 
-// // Verificar que hay un parametro 'numero' a traves del metodo GET
-// if($_GET['numero']){ // Si hay un parametro 'numero' en el metodo $_GET, esto es TRUE, por lo tanto
-//     $numero =$_GET['numero']; // cree una Variable $numero y asignarle el valor del parametro 'numero'
+// Verificar que hay un parametro 'numero' a traves del metodo GET
+// if(isset($_GET['numero'])){ // Si hay un parametro 'numero' en el metodo $_GET, esto es TRUE, por lo tanto
+//     $numero = (int) $_GET['numero']; // cree una Variable $numero y asignarle el valor del parametro 'numero'
 // }else{
 //     $numero = 1; // Si no hay un parametro 'numero', es decir que es FALSE, cree la Variable $numero y asignarle el valor 1
 // }
@@ -38,11 +38,12 @@ echo "<h1>Tabla de multiplicar del número $numero </h1>";
 
 $contador =0;
 while ($contador <=10){
-    echo "$numero X $contador = ".($numero*$contador);
-    echo '<hr>';
-
+    echo "$numero X $contador = ".($numero*$contador)."</br>";
+ 
     $contador++;
-}
+};
+
+echo "<hr>";
 
 // Do While la condicion se evalua la final
 
@@ -52,11 +53,11 @@ while ($contador <=10){
 // }while(condicion);
 
 $edad = 17;
-$contador =1;
+$contador1 = 1;
 
 do{
-    echo "Tienes acceso al local privado $contador <br>";
-    $contador++;
-}while($edad >=18 && $contador<=10);
+    echo "Tienes acceso al local privado $contador1 <br>";
+    $contador1 ++;
+}while($edad >=18 && $contador1 <=10);
 
 ?>
